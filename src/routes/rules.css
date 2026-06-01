@@ -1,0 +1,454 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Arial Black', Impact, sans-serif;
+  margin: 0;
+  background:
+    radial-gradient(circle at top, #0f4dff 0%, #0727b8 35%, #03147a 70%, #020c4f 100%);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 183, 255, 0.25), transparent 60%);
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ── PAGE WRAPPER ── */
+.home {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 1.5rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* ── NAV ── */
+#NAV__prime0 {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem 1.5rem;
+  position: relative;
+  z-index: 20; /* maior que o z-index dos botões */
+}
+
+.btn-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5em 1.2em;
+  border-radius: 0.5em;
+  background: linear-gradient(180deg, #1674ff, #003cff);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-voltar img {
+  width: 20px;
+  height: auto;
+}
+
+.btn-voltar::before {
+  font-size: 1.1rem;
+}
+
+.btn-voltar:hover {
+  background: linear-gradient(180deg, #3d8bff, #1a55ff);
+  transform: translateX(-2px);
+}
+
+/* ── TÍTULO ── */
+.titulo {
+  text-align: center;
+  margin-top: -1rem;
+}
+
+.titulo h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 900;
+  font-style: italic;
+  color: white;
+  text-shadow:
+    0 4px 0 rgba(0, 0, 0, 0.25),
+    0 0.5em 1.2em rgba(0, 0, 0, 0.35);
+  position: relative;
+  z-index: 1;
+}
+
+.titulo h2 {
+  margin: -0.4em 0 0 0;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 900;
+  font-style: italic;
+  background: linear-gradient(180deg, #43c8ff, #0095ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 0 rgba(0, 0, 0, 0.25))
+          drop-shadow(0 0.5em 1.2em rgba(0, 0, 0, 0.35));
+  position: relative;
+  z-index: 2;
+}
+
+/* ── SECTION PRINCIPAL ── */
+#SEC_prime0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20rem;
+  width: 100%;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+/* ── BOTÕES REGRAS / CRÉDITOS ── */
+#DV_regras_e_creditos {
+  position: absolute;
+  left: 3rem;
+  top: 40%;
+  transform: translateY(-40%);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  z-index: 10;
+}
+
+.A_regras_e_creditos {
+  width: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1em;
+  border-radius: 0.5em;
+  background: rgba(0, 0, 60, 0.35);
+  border: 0.125rem solid rgba(0, 183, 255, 0.25);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Arial Black', Impact, sans-serif;
+  box-shadow: 0 0.8rem 1rem rgba(0, 0, 0, 0.3);
+  transition: 0.2s ease;
+}
+
+.A_regras_e_creditos i {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.A_regras_e_creditos:hover {
+  background: #1e50f0;
+  border-color: #00b7ff;
+  transform: scale(1.05);
+}
+
+/* ── CARD PRINCIPAL ── */
+.DV_main_card {
+  margin-top: -1.4rem;
+  max-width: 65%;
+  background: rgba(0, 0, 60, 0.35);
+  border: 0.125rem solid rgba(0, 183, 255, 0.25);
+  border-radius: 1rem;
+  padding: 1rem;
+  backdrop-filter: blur(0.625rem);
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  margin-left: 22rem;
+}
+
+.DV_card_content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ── TABULEIRO ── */
+.DV__board {
+  width: clamp(12rem, 28vw, 18rem);
+  height: clamp(12rem, 28vw, 18rem);
+  background: linear-gradient(180deg, #0f73ff, #003cff);
+  border-radius: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(0.3rem, 1vw, 0.6rem);
+  padding: clamp(0.6rem, 2vw, 1rem);
+  flex-shrink: 0;
+}
+
+.slot {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #00218d;
+  box-shadow: inset 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.5);
+}
+
+.slot.red    { background: red; }
+.slot.yellow { background: gold; }
+
+/* ── ÁREA DE TEXTO ── */
+.DV_text_area {
+  flex: 1;
+  min-width: 12rem;
+}
+
+.DV_text_area h2 {
+  color: white;
+  font-size: clamp(0.9rem, 2.5vw, 1.7rem);
+  margin-bottom: 5rem;
+  line-height: 1.3;
+}
+
+.DV_text_area p {
+  color: white;
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* ── CARDS RESUMO ── */
+#SEC__prime1 {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 12rem;
+  flex-wrap: wrap;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+.DV_resumo_prime0 {
+  background: rgba(0, 0, 60, 0.35);
+  border: 0.125rem solid rgba(0, 183, 255, 0.25);
+  backdrop-filter: blur(0.625rem);
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  flex: 1 1 14rem;
+  max-width: 22rem;
+  min-height: 19rem;
+  text-align: center;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.DV_resumo_prime0:hover {
+  background: #1e50f0;
+  border-color: #00b7ff;
+  transform: scale(1.05);
+}
+
+.DV_resumo_prime0 i {
+  color: #00b7ff;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-top: -5rem;
+}
+
+.DV_resumo_prime0 h3 {
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  margin: 0;
+}
+
+.DV_resumo_prime0 p {
+  font-size: clamp(1rem, 1.2vw, 1rem);
+  opacity: 0.85;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-top: 4rem;
+}
+
+/* ════════════════════════════════════════
+   RESPONSIVO — tablet (≤ 960px)
+════════════════════════════════════════ */
+
+@media (max-width: 90rem) {
+
+  .titulo {
+    margin-top: -2.5rem;
+  }
+
+  #SEC_prime0 {
+    flex: unset;
+    padding-top: 0;
+  }
+
+  .DV_main_card {
+    margin-top: -1.5rem;
+    margin-left: 18rem;
+    max-width: 60%;
+  }
+
+  .DV_card_content {
+    gap: 3rem;
+  }
+
+  .DV_text_area h2 {
+    margin-bottom: 2rem;
+  }
+
+  #SEC__prime1 {
+    gap: 3rem;
+    margin-top: 0.5rem;
+  }
+
+  .DV_resumo_prime0 {
+    min-height: 14rem;
+  }
+
+  .DV_resumo_prime0 i {
+    margin-top: -2rem;
+  }
+
+  .DV_resumo_prime0 p {
+    margin-top: 1rem;
+  }
+}
+
+
+@media (max-width: 60rem) {
+  #DV_regras_e_creditos {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .A_regras_e_creditos {
+    flex: 1;
+    max-width: 14rem;
+  }
+
+  #SEC_prime0 {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    flex: unset;
+  }
+
+  .DV_main_card {
+    width: 100%;
+    max-width: 38rem;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .DV_card_content {
+    gap: 1.5rem;
+  }
+
+  .DV__board {
+    width: clamp(10rem, 40vw, 14rem);
+    height: clamp(10rem, 40vw, 14rem);
+  }
+
+  .DV_text_area h2 {
+    margin-bottom: 1rem;
+  }
+
+  #SEC__prime1 {
+    gap: 1rem;
+  }
+
+  .DV_resumo_prime0 {
+    min-height: 12rem;
+    max-width: 100%;
+  }
+
+  .DV_resumo_prime0 i {
+    margin-top: 0;
+  }
+
+  .DV_resumo_prime0 p {
+    margin-top: 0;
+  }
+}
+
+/* ════════════════════════════════════════
+   RESPONSIVO — mobile (≤ 480px)
+════════════════════════════════════════ */
+@media (max-width: 30rem) {
+  #DV_regras_e_creditos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .A_regras_e_creditos {
+    width: 100%;
+    max-width: 16rem;
+  }
+
+  .DV__board {
+    display: none;
+  }
+
+  .DV_text_area {
+    min-width: unset;
+    width: 100%;
+  }
+
+  #SEC__prime1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .DV_resumo_prime0 {
+    width: 100%;
+    max-width: 100%;
+    min-height: 8rem;
+  }
+}

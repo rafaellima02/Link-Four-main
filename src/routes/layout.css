@@ -1,0 +1,63 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+/*Reset & Base*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/*Background principal*/
+
+body {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Arial Black', Impact, sans-serif;
+  margin: 0;
+  overflow: hidden;
+    /* Fundo azul degradê */  
+    background:
+        radial-gradient(circle at top, #0f4dff 0%, #0727b8 35%, #03147a 70%, #020c4f 100%);
+
+    position: relative;
+}
+
+/*Grade do fundo*/
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+
+    background-size: 50px 50px;
+
+    pointer-events: none;
+}
+
+/*Glow azul suave*/
+
+body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(0, 183, 255, 0.25),
+            transparent 60%);
+
+    pointer-events: none;
+}
+
