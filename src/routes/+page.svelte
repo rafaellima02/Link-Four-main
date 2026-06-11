@@ -1,0 +1,66 @@
+<script>
+  // sem imports necessários
+</script>
+
+<svelte:head>
+  <title>Link Four</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</svelte:head>
+
+<section>
+  <div class="logo-wrapper">
+
+    <div class="logo-title">
+      <div class="word">
+        <div class="ball ball-red"></div>
+        <span class="letter1">LINK</span>
+      </div>
+
+      <div class="word2">
+        <span class="letter" data-text="FOUR">FOUR</span>
+        <div class="ball ball-yellow"></div>
+      </div>
+    </div>
+
+    <div class="piece-bar">
+      <div class="piece piece-red"></div>
+      <div class="piece piece-yellow"></div>
+      <div class="piece piece-red"></div>
+      <div class="piece piece-yellow"></div>
+      <div class="piece piece-red"></div>
+      <div class="piece piece-yellow"></div>
+      <div class="piece piece-red"></div>
+    </div>
+
+    <div class="msg-wrapper">
+      <div class="tagline">
+        <span class="line"></span>
+        <span class="msg-line">Every Move Counts</span>
+        <span class="line"></span>
+      </div>
+    </div>
+
+    <div class="btn-wrapper">
+      <a href="/game">
+        <button class="play-btn">
+          <span>PLAY</span>
+        </button>
+      </a>
+    </div>
+
+    <div class="btn-wrapper">
+      <a href="/rules">
+        <button class="about-btn">
+          <span>MORE ABOUT</span>
+        </button>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  @import './home.css';
+</style>
