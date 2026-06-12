@@ -3,13 +3,7 @@
   import { goto } from '$app/navigation';
 
   function goBack() {
-    if (typeof window !== 'undefined') {
-      history.back();
-    }
-  }
-
-  function handleCredits() {
-    goto('/credits');
+    goto('/')
   }
 
   function handleRules() {
@@ -46,10 +40,12 @@
         RULES
       </button>
 
-      <button class="A_regras_e_creditos" onclick={handleCredits}>
+      <a href="http:/credits">
+      <button class="A_regras_e_creditos">
         <i class="fa-regular fa-star"></i>
         CREDITS
       </button>
+      </a>
     </div>
 
     <section id="SEC_prime0">

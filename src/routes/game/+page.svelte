@@ -24,6 +24,7 @@
     <header class="top">
 
       <div class="logo-title">
+        <a href="http:/">
         <div class="word">
           <div class="ball ball-red"></div>
           <span class="letter1">LINK</span>
@@ -32,11 +33,11 @@
           <span class="letter">FOUR</span>
           <div class="ball ball-yellow"></div>
         </div>
+        </a>
       </div>
 
       <button class="btn-home" onclick={goHome}>
-        <img src={home} alt="Home Icon" />
-        <span>home</span>
+        <span>RULES</span>
       </button>
     </header>
 

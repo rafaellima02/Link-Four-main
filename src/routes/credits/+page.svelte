@@ -1,8 +1,8 @@
 <script>
   import { goto } from '$app/navigation';
 
-  function goHome() {
-    goto('/');
+ function goBack() {
+    goto('/')
   }
 
    function goRules() {
@@ -36,18 +36,14 @@
 <main class="credits-page">
 
   <!-- NAV -->
-  <nav class="credits-nav">
-    <a href="/" class="nav-logo">
-      <div class="nav-word">
-        <div class="nav-ball-red"></div>
-        <span class="nav-letter1">LINK</span>
+  <nav id="NAV__prime0">
+      <div id="DV_home_prime0">
+        <button class="btn-voltar" onclick={goBack}>
+          <img src="/icons/arrow.png" alt="logo" />
+          BACK
+        </button>
       </div>
-      <div class="nav-word2">
-        <span class="nav-letter2">FOUR</span>
-        <div class="nav-ball-yellow"></div>
-      </div>
-    </a>
-  </nav>
+    </nav>
 
   <!-- SIDEBAR -->
   <div class="credits-sidebar">

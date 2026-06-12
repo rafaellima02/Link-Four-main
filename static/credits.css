@@ -46,81 +46,48 @@ body::after {
   flex-direction: column;
 }
 
+
 /*NAV */
-.credits-nav {
+#NAV__prime0 {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.2rem 3rem;
+  justify-content: flex-start;
+  padding: 1rem 1.5rem;
   position: relative;
   z-index: 20;
 }
 
-/*LOGO "LINK FOUR"*/
-.nav-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-decoration: none;
-  line-height: 1;
-  gap: -1rem;
+#DV_home_prime0 {
+  display: inline-flex;
 }
 
-.nav-word {
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
+/*BUTTON "BACK"*/
+.btn-voltar {
+ display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 9px 21px;
+		background-color: #0439ff;
+		border: 1px solid #2cb9ff;
+		border-radius: 10px;
+		color: #fff;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-decoration: none;
+		letter-spacing: 3%;
+		font-size: 17px;
+        cursor: pointer;
 }
 
-.nav-word2 {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-left: 1.8rem;
+.btn-voltar img {
+  width: 20px;
+  height: auto;
 }
 
-.nav-letter1 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  font-size: 35px;
-  font-style: italic;
-  color: #ffffff;
-  text-shadow: 1px 3px 4px #0a3060;
-  line-height: 1;
-  letter-spacing: 1px;
-  user-select: none;
+.btn-voltar:hover {
+  background: linear-gradient(180deg, #3d8bff, #1a55ff);
+  transform: translateX(-2px);
 }
 
-.nav-letter2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  font-size: 35px;
-  font-style: italic;
-  color: #1a9ae0;
-  text-shadow: 1px 3px 4px #0a3060;
-  line-height: 1;
-  letter-spacing: 1px;
-  user-select: none;
-}
-
-.nav-ball-red {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #e8453d;
-  flex-shrink: 0;
-  box-shadow: 1px 3px 4px #0a3060;
-}
-
-.nav-ball-yellow {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #e8a820;
-  flex-shrink: 0;
-  box-shadow: 1px 3px 4px #0a3060;
-  margin-left: -2px;
-}
 
 /* Botão HOME — estilo padrão do projeto */
 .btn-home {
